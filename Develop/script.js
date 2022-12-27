@@ -67,7 +67,7 @@ var upperCase = confirm (" Would you like to include UPPERCASE letters ?");
     characters.push(symbols)
     console.log(symbolCase)
   } 
-//calling the cahracters array to join the string together 
+//calling the characters array to join the string together 
 var passwordGen = characters.join('')
   console.log(passwordGen)
 //randomly geneterating characters to create pw

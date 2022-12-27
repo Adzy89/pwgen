@@ -24,3 +24,5 @@ no license
 ## live pages 
 
 https://github.com/Adzy89/pwgen
+
+https://adzy89.github.io/pwgen/

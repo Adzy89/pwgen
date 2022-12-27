@@ -26,6 +26,12 @@ var lowerCase =  confirm (" Would you like to include lowercase letters ?" );
     return;
   }
 
+var upperCase = confirm (" Would you like to include UPPERCASE letters ?");
+
+  if (upperCase === false ) {
+    alert("Please select 'OK' and try again");
+    return;
+  }
 
 
 

@@ -9,7 +9,6 @@ var upperCharacters = [ 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' ];
 var characters = []
 
 function generatePassword(){
-  console.log("button clicked");
   var passwordLength = parseInt(window.prompt("Please select between 8 & 128 Characters"));
 
 //created statement to determine if the pw is less ten 8 char or higher 
@@ -25,14 +24,14 @@ var lowerCase =  confirm (" Would you like to include lowercase letters ?" );
     alert("Please select 'OK' and try again");
     return;
   }
-//created statement for lowercase false value 
+//created statement for uppercase false value 
 var upperCase = confirm (" Would you like to include UPPERCASE letters ?");
 
   if (upperCase === false ) {
     alert("Please select 'OK' and try again");
     return;
   }
-//created statement for uppercase  false value 
+//created statement for numberscase  false value 
   var numbersCase = confirm (" Would you like to include numbers ?");
 
   if (numbersCase === false){
@@ -46,9 +45,9 @@ var upperCase = confirm (" Would you like to include UPPERCASE letters ?");
     alert("Please select 'OK' and try again");
     return;
   }
-//created true statements 
-  var passwordInput = '';
 
+  var passwordInput = '';
+//created true statements 
   if (lowerCase === true) {
     characters.push(lowerCharacters)
     console.log(lowerCase) 
@@ -68,18 +67,18 @@ var upperCase = confirm (" Would you like to include UPPERCASE letters ?");
     characters.push(symbols)
     console.log(symbolCase)
   } 
-
+//calling the cahracters array to join the string together 
 var passwordGen = characters.join('')
   console.log(passwordGen)
-
+//randomly geneterating characters to create pw
 for (var i=0; i < passwordLength; i++) {
   passwordInput += passwordGen.charAt(Math.floor(Math.random() * passwordGen.length));
   console.log(passwordInput);
 }
-  
+//calling the password function
   writePassword(passwordInput);
 }
-  
+// caling the function to display password in text area
 function writePassword(text) {
   var passwordText = document.getElementById("password");
   passwordText.value = text;  
